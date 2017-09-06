@@ -35,7 +35,7 @@ gerenciar, atualizar, e que descrevem a proposta/solução a ser desenvolvida.
 
 ### 4.RASCUNHOS BÁSICOS DA INTERFACE (MOCKUPS)<br>
 
-https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/I%20do.pdf<br>
+  https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/I%20do.pdf
 
 
 
