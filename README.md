@@ -44,8 +44,25 @@ gerenciar, atualizar, e que descrevem a proposta/solução a ser desenvolvida.
     
     
 #### 4.2 QUAIS PERGUNTAS PODEM SER RESPONDIDAS COM O SISTEMA PROPOSTO?
-    a) O sistema proposto poderá fornecer quais tipos de relatórios e informaçes? 
+   
+    a) O sistema proposto poderá fornecer quais tipos de relatórios e informaçes?
+   
+    O aplicativo pode oferecer um relatório tanto para o usário, como para o prestador de serviço.
+    Para o usuário, ele pode ver um relatório de serviços contratados que pode servi de lembrete de um serviço que ele contratou.
+    Já pra o prestador de serviço, o relatório serve para ele ver seu redimento com o aplicativo.
+    
     b) Crie uma lista com os 10 principais relatórios que podero ser obtidos por meio do sistema proposto!
+   
+    1- Relatório de Clientes;
+    2- Relatório de Prestadores de Serviço;
+    3- Relatório de Serviços oferecido; 
+    4- Relatório de Serviços contratados;
+    5- Relatória de Serviços Realizados;
+    6- Relatório de Serviços de um estado;
+    
+    
+    
+    
     
 >## Marco de Entrega 01 em: (Data definida no cronograma)<br>
 
