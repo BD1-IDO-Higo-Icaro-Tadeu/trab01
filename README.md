@@ -59,6 +59,8 @@ gerenciar, atualizar, e que descrevem a proposta/solução a ser desenvolvida.
     4- Relatório de Serviços contratados;
     5- Relatória de Serviços Realizados;
     6- Relatório de Serviços de um estado;
+    7- Relatório de Métodos de pagamento utilizados;
+    
     
     
     
