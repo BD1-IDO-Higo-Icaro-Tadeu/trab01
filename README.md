@@ -13,8 +13,9 @@ Icaro Gandine: icarog28@gmail.com<br>
 Tadeu da Penha Moraes Junior: tadeu_junior@outlook.com<br>
 
 ### 2.INTRODUÇÃO E MOTIVAÇAO<br>
-Este documento contém a especificação do projeto do banco de dados <nome do projeto> 
-<br>e motivação da escolha realizada. <br>
+
+Com a necessecidade da pessoas de buscar pequenos serviços de qualidade e de boa indicação, pensamos o I Do, um aplicativo de serviços, onde se pode ofertar e realizar um serviço.
+
 
 ### 3.MINI-MUNDO<br>
 
