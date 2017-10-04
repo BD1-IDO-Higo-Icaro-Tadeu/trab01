@@ -11,7 +11,7 @@ Tadeu da Penha Moraes Junior: tadeu_junior@outlook.com<br>
 
 ### 2.INTRODUÇÃO E MOTIVAÇAO<br>
 
-Com a necessecidade da pessoas de buscar pequenos serviços de qualidade e de boa indicação, pensamos o I Do, um aplicativo onde o usuário busque um serviço desejado e através de uma lista de prestadores de serviço ele possa ver sua reputação, valor de trabalho, qualidade de serviço avaliação, valor, pontualidade e um relatório de serviços acionados pelo usuário e serviços feitos pelo prestador. O prestador de serviço também tem a opção de escolher se ele vai cobrar um preço fixo para qualquer atividade ou combinar o preço diretamente com quem requisita o serviço.<br>
+Com a necessecidade das pessoas de buscar pequenos serviços de qualidade e de boa indicação, pensamos o I Do, um aplicativo onde o usuário busque um serviço desejado e através de uma lista de prestadores de serviço ele possa ver sua reputação, valor de trabalho, qualidade de serviço avaliação, valor, pontualidade e um relatório de serviços acionados pelo usuário e serviços feitos pelo prestador. O prestador de serviço também tem a opção de escolher se ele vai cobrar um preço fixo para qualquer atividade ou combinar o preço diretamente com quem requisita o serviço.<br>
 
 
 ### 3.MINI-MUNDO<br>
