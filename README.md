@@ -11,17 +11,12 @@ Tadeu da Penha Moraes Junior: tadeu_junior@outlook.com<br>
 
 ### 2.INTRODUÇÃO E MOTIVAÇAO<br>
 
-Com a necessecidade da pessoas de buscar pequenos serviços de qualidade e de boa indicação, pensamos o I Do, um aplicativo de serviços, onde se pode ofertar e realizar um serviço.
+Com a necessecidade da pessoas de buscar pequenos serviços de qualidade e de boa indicação, pensamos o I Do, um aplicativo onde o usuário busque um serviço desejado e através de uma lista de prestadores de serviço ele possa ver sua reputação, valor de trabalho, qualidade de serviço avaliação, valor, pontualidade e um relatório de serviços acionados pelo usuário e serviços feitos pelo prestador. O prestador de serviço também tem a opção de escolher se ele vai cobrar um preço fixo para qualquer atividade ou combinar o preço diretamente com quem requisita o serviço.<br>
 
 
 ### 3.MINI-MUNDO<br>
 
-Com um grande mercado de prestação de serviços pensamos em criar um aplicativo onde o usuário busque um serviço desejado e através de
-uma lista de prestadores de serviço ele possa ver sua reputação, valor de trabalho, qualidade de serviço avaliação, valor, pontualidade
-e um relatório de serviços acionados pelo usuário e serviços feitos pelo prestador. O prestador de serviço também tem a opção de escolher se ele vai cobrar um preço fixo para qualquer atividade ou combinar o preço diretamente com quem requisita o serviço.<br>
-
-Ao instalar o aplicativo o usuário faz um cadastro, com seu nome, endereço e adiciona um cartão de crédito para pagamento do serviço que
-deseje. Para prestar um serviço o usuário também realizar um cadastro com seu nome, telefone e serviços que serão prestados. O aplicativo também tem um sistema de contato próprio (chat) entre o prestador do serviço e quem o requisita.<br>
+Ao instalar o aplicativo o usuário faz um cadastro, com seu nome, endereço e adiciona um cartão de crédito (opcional) para pagamento do serviço que desejar. Para prestar um serviço o usuário também realiza um cadastro com seu nome, telefone e serviços que serão prestados. O aplicativo também tem um sistema de contato próprio (chat) entre o prestador do serviço e quem o requisita, assim, quando o prestador receber uma solicitação, ele entrará em contato com o contratante para tratar dos demais detalhes do contrato.<br>
 
 O prestador de serviço tem a opção de aceitar ou recusar o serviço. Quando o serviço for concluído o cliente avalia.<br>
 
