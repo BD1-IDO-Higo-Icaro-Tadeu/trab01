@@ -16,7 +16,9 @@ Com a necessecidade da pessoas de buscar pequenos serviços de qualidade e de bo
 
 ### 3.MINI-MUNDO<br>
 
-Ao instalar o aplicativo o usuário faz um cadastro, com seu nome, endereço e adiciona um cartão de crédito (opcional) para pagamento do serviço que desejar. Para prestar um serviço o usuário também realiza um cadastro com seu nome, telefone e serviços que serão prestados. O aplicativo também tem um sistema de contato próprio (chat) entre o prestador do serviço e quem solicita, assim, quando o prestador receber uma solicitação, ele entrará em contato com o contratante para tratar dos demais detalhes do contrato. Se o prestador não aceitar a solicitação, o contato é finalizado. Caso seja aceito, o serviço é feito, após o serviço o usuário escolhe a forma de pagamento, avalia o serviço e o prestador de serviço também avalia o contratante.<br>
+Ao instalar o aplicativo o usuário faz um cadastro, com seu nome, endereço e adiciona um cartão de crédito (opcional) para pagamento do serviço que desejar. Para prestar um serviço o usuário também realiza um cadastro com seu nome, telefone e serviços que serão prestados. O aplicativo também tem um sistema de contato próprio (chat) entre o prestador do serviço e quem solicita, assim, quando o prestador receber uma solicitação, ele entrará em contato com o contratante para tratar dos demais detalhes do contrato.<br>
+
+Antes de mandar a solicitação, o requisitante tem acesso a uma tela que mostra algumas informações sobre o prestador como preço, localização, média das avaliações e fotos de serviços anteriores realizados (caso as mesmas sejam postadas pelo prestador). Após receber a solicitação o prestador tem acesso a uma tela mostrando a localização do requisitante, podendo assim aceitar o serviço e entrar em contato com o requisitante ou apenas recusar o serviço. Se o prestador não aceitar a solicitação, o contato é finalizado. Caso seja aceito, o serviço é feito, após o serviço o usuário escolhe a forma de pagamento, avalia o serviço e o prestador de serviço também avalia o contratante.<br>
 
 ### 4.RASCUNHOS BÁSICOS DA INTERFACE (MOCKUPS)<br>
 
