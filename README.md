@@ -16,15 +16,7 @@ Com a necessecidade da pessoas de buscar pequenos serviços de qualidade e de bo
 
 ### 3.MINI-MUNDO<br>
 
-Ao instalar o aplicativo o usuário faz um cadastro, com seu nome, endereço e adiciona um cartão de crédito (opcional) para pagamento do serviço que desejar. Para prestar um serviço o usuário também realiza um cadastro com seu nome, telefone e serviços que serão prestados. O aplicativo também tem um sistema de contato próprio (chat) entre o prestador do serviço e quem o requisita, assim, quando o prestador receber uma solicitação, ele entrará em contato com o contratante para tratar dos demais detalhes do contrato.<br>
-
-O prestador de serviço tem a opção de aceitar ou recusar o serviço. Quando o serviço for concluído o cliente avalia.<br>
-
-
-Entrevista com o usuário e identificação dos requisitos.<br>
-Descrição textual das regras de negócio definidas como um  subconjunto do mundo real 
-cujos elementos são propriedades que desejamos incluir, processar, armazenar, 
-gerenciar, atualizar, e que descrevem a proposta/solução a ser desenvolvida.
+Ao instalar o aplicativo o usuário faz um cadastro, com seu nome, endereço e adiciona um cartão de crédito (opcional) para pagamento do serviço que desejar. Para prestar um serviço o usuário também realiza um cadastro com seu nome, telefone e serviços que serão prestados. O aplicativo também tem um sistema de contato próprio (chat) entre o prestador do serviço e quem solicita, assim, quando o prestador receber uma solicitação, ele entrará em contato com o contratante para tratar dos demais detalhes do contrato. Se o prestador não aceitar a solicitação, o contato é finalizado. Caso seja aceito, o serviço é feito, após o serviço o usuário escolhe a forma de pagamento, avalia o serviço e o prestador de serviço também avalia o contratante.<br>
 
 ### 4.RASCUNHOS BÁSICOS DA INTERFACE (MOCKUPS)<br>
 
