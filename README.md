@@ -77,6 +77,21 @@ Antes de mandar a solicitação, o requisitante tem acesso a uma tela que mostra
     EXEMPLO:
     CLIENTE: Tabela que armazena as informações relativas ao cliente<br>
     CPF: campo que armazena o número de Cadastro de Pessoa Física para cada cliente da empresa.<br>
+--------------------------------------
+    PESSOA: essa tabela contém as informações de uma conta do aplicativo, como nome, endereço, cpf, etc.
+        - nome: campo que armazena o nome completo do usuário
+        - senha: campo que armazena a senha da conta no iDo
+        - usuario: campo que armazena um "nome de usuário" de uma conta no iDo
+        - cpf_id: campo que armazena o CPF de um usuário, usado como chave primária já que duas pessoas não podem ter o mesmo CPF
+        - email: campo que armazena o email do usuário (que é usado normalmente pra fazer o login)
+    
+    CARTAO: essa tabela armazena as informações do cartão de um usuário
+        - nome_cartao: campo que armazena o nome do titular do cartão
+        - numero_cartao: campo que armazena o número do cartão
+        - ccv: campo que armazena o código de segurança do cartão (CCV)
+        - validade: campo que armazena a data de validade do cartão
+        - cartao_id: campo que armazena um número de identificação para o cartão, usado para identificar um cartão mais facilmente, usado como chave primária já que dois cartões nunca terão um mesmo número de identificação
+        - 
 
 
 ### 6	MODELO LÓGICO<br>
