@@ -75,22 +75,100 @@ Antes de mandar a solicitação, o requisitante tem acesso a uma tela que mostra
     CLIENTE: Tabela que armazena as informações relativas ao cliente<br>
     CPF: campo que armazena o número de Cadastro de Pessoa Física para cada cliente da empresa.<br>
 --------------------------------------
-    PESSOA: essa tabela contém as informações de uma conta do aplicativo, como nome, endereço, cpf, etc.
-        - nome: campo que armazena o nome completo do usuário
-        - senha: campo que armazena a senha da conta no iDo
-        - usuario: campo que armazena um "nome de usuário" de uma conta no iDo
-        - cpf_id: campo que armazena o CPF de um usuário, usado como chave primária já que duas pessoas não podem ter o mesmo CPF
-        - email: campo que armazena o email do usuário (que é usado normalmente pra fazer o login)
+    PESSOA: tabela contém as informações de uma conta do aplicativo, composta pelos os campos:
     
-    CARTAO: essa tabela armazena as informações do cartão de um usuário
-        - nome_cartao: campo que armazena o nome do titular do cartão
-        - numero_cartao: campo que armazena o número do cartão
-        - ccv: campo que armazena o código de segurança do cartão (CCV)
-        - validade: campo que armazena a data de validade do cartão
-        - cartao_id: campo que armazena um número de identificação para o cartão, usado para identificar um cartão mais facilmente, usado como chave primária já que dois cartões nunca terão um mesmo número de identificação
-        - 
+        - nome: campo que armazena o nome completo do usuário;
+        - senha: campo que armazena a senha da conta no iDo;
+        - servico_fid: campo de chave estrangeira que indica qual profissao e oferecida;
+        - usuario: campo que armazena um "nome de usuário" de uma conta no iDo;
+        - cpf_id: campo que armazena o CPF de um usuário, usado como chave primária já que duas pessoas não podem ter o mesmo CPF;
+        - email: campo que armazena o email do usuário;
+        - usuario: campo armazena  usuário da conta;
+        - num_casa: armazena o numero da casa do usuario;
+        - contato_fid: campo de chaves estrangeira que armazena contatos de telefone ou celular;
+        - endereco_fid: campo de chaves estrangeira com endereço, composto por, bairro, cep, cidade e estado;
+        - descricao_fid: campo de chaves estrangeira que armazena detalhes sobre o serviço oferecido do usurio.<br>
+    
+   CARTAO: tabela armazena as informações do cartão de um usuário, composta pelos campo:
+   
+        - nome_cartao: campo que armazena o nome do titular do cartão;
+        - numero_cartao: campo que armazena o número do cartão;
+        - ccv: campo que armazena o código de segurança do cartão (CCV);
+        - validade: campo que armazena a data de validade do cartão;
+        - cartao_id: campo que armazena um número de identificação para o cartão, usado para identificar um cartão mais facilmente,               usado como chave primária;
+        - usuario_fid: campo de chaves estrangeira, para identificação do dono do cartao. <br>
+   
+   CONTATO: tabela armazena as informações de contatos do usuário, composta pelos campo:<br>
+   
+        - contato_id: campo que armazena um número de identificação da tabela contato;
+        - celular: campo armazena numero do celular do usário;
+        - telefone: campo armazena numero de telefone do usuario;
+        - usuario_fid: campo de chaves estrangeira, para identificação do usuário na tabela contato.<br>
+    
+   ENDERECO: tabela armazena as informações do endereço do usuário, composta pelos campo:<br>
+   
+        - endereco_id: campo que armazena um número de identificação da tabela endereço;
+        - usuario_fid: campo de chaves estrangeira, para identificação do usuário na tabela endereço;
+        - cep_fid: campo de chaves estrangeira, para identificação do cep na tabela endereco.<br>
+ 
+   ENDERECO: tabela armazena as informações do endereço do usuário, composta pelos campo:<br>
+   
+        - endereco_id: campo que armazena um número de identificação da tabela endereço;
+        - usuario_fid: campo de chaves estrangeira, para identificação do usuário na tabela endereço;
+        - cep_fid: campo de chaves estrangeira, para identificação do cep na tabela endereco.
+        
+   CEP: tabela armazena as informações do cep da tabela de endereço, composta pelos campo:<br>
+   
+        - cep_id: campo que armazena um número de identificação da tabela endereço;
+        - rua: campo armazena o nome da rua; 
+        - bairro_fid: campo de chaves estrangeira, para identificação do bairro na tabela cep.<br>   
 
+   BAIRRO: tabela armazena as informações do bairro da tabela de cep, composta pelos campo: <br>
+   
+        - bairro_id: campo que armazena um número de identificação da tabela bairro;
+        - bairro: campo armazena o nome do bairro; 
+        - cidade_fid: campo de chaves estrangeira, para identificação do cidade na tabela bairro.
+        
+   CIDADE: essa tabela armazena as informações da cidade da tabela de bairro, composta pelos campo: <br>
+   
+        - cidade_id: campo que armazena um número de identificação da tabela cidade;
+        - cidade: campo armazena o nome da cidade; 
+        - estado_fid: campo de chaves estrangeira, para identificação do estado na tabela cidade.; <br>
 
+   ESTADO: tabela armazena as informações do estado da tabela de cidade, composta pelos campo:<br>
+   
+        - estado_id: campo que armazena um número de identificação da tabela estado;
+        - sigla: campo armazena o sigla do estado.<br>
+     
+   SERVICO_CONTRATADO: tabela armazena as informações de serviços contratado pelo usuario, composta pelos campo: <br>
+   
+        - usuario_fid: campo de chaves estrangeira, para identificação do usuario que contratou um serviço;
+        - prestador_fid: campo de chaves estrangeira, para identificação do usuario que prestou um serviço;
+        - servico_fid: campo de chave estrangeira que indica qual serviço foi  oferecido.<br>
+        
+  SERVICO: tabela armazena as informações de serviços oferecido pelos usuarios, composta pelos campo: <br>
+   
+        - servico_fid: campo de chaves estrangeira, para identificação do usuario que contratou um serviço;
+        - seervico_oferecido: campo de armazena o nome do serviço oferecido. <br>        
+  
+  SERVICO_DESCRICAO: tabela armazena as informações de serviços oferecido pelo usuario, composta pelos campo: <br>
+   
+        - usuario_fid: campo de chaves estrangeira, para identificação do usuario que contratou um serviço;
+        - servico_opcao: campo de chaves estrangeira, para identificação do usuario que prestou um serviço;
+        - minitexto: campo de chave estrangeira que indica qual serviço foi  oferecido.<br>
+        - descricao_id: 
+        - unidade: 
+        - foto:
+        - valor:
+        - servico_fid:<br>
+        
+   AVALIACAO: tabela armazena as informações de serviços contratado pelo usuario, composta pelos campo: <br>
+   
+        - cliente_fid
+        - comentario: chaves estrangeira, para identificação do usuario que prestou um serviço;
+        - nota: campo de chave estrangeira que indica qual serviço foi  oferecido;
+        -prestador_id: <br>
+        
 ### 6	MODELO LÓGICO<br>
 ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/modelo_logico_IDO.jpg "Modelo Lógico")
 
