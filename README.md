@@ -64,12 +64,9 @@ Antes de mandar a solicitação, o requisitante tem acesso a uma tela que mostra
     [Grupo02]: [Nomes dos que participaram na avaliação]
 
 #### 5.2 DECISÕES DE PROJETO
-    [atributo]: [descrição da decisão]
+ Não houver nenhuma decisão.
     
-    EXEMPLO:
-    a) Campo endereço: em nosso projeto optamos por um campo multivalorado e composto, pois a empresa 
-    pode possuir para cada departamento mais de uma localização... 
-    b) justifique!
+ 
 
 #### 5.3 DESCRIÇÃO DOS DADOS 
     [objeto]: [descrição do objeto]
@@ -105,16 +102,49 @@ Antes de mandar a solicitação, o requisitante tem acesso a uma tela que mostra
        
         
 ### 8	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
-#### 8.1 DETALHAMENTO DAS INFORMAÇÕES
-        a) inclusão das instruções de inserção dos dados nas tabelas criadas pelo script de modelo físic
-        b) formato .SQL
-
+#### 8.1 DETALHAMENTO DAS INFORMAÇÕES <br>
+   Tabela Avaliacão <br>
+   https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/arquivos/avaliacao_isert.sql <br>
+    
+   Tabela Bairro <br>
+   https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/arquivos/bairro_insert.sql <br>
+   
+   Tabela Cartão <br>
+   https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/arquivos/cartao_insert.sql <br>
+   
+   Tabela Cep <br>
+   https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/arquivos/cep_insert.sql <br>
+   
+   Tabela Cidade <br>
+   https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/arquivos/cidade_insert.sql <br>
+   
+   Tabela Contato <br>
+   https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/arquivos/contato_insert.sql <br>
+   
+   Tabela Endereço <br>
+   https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/arquivos/endereco_insert.sql <br>
+   
+   Tabela Estado <br>
+   https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/arquivos/estado_insert.sql <br>
+   
+   Tabela Pessoa <br>
+   https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/arquivos/pessoa_insert.sql <br>
+   
+   Tabela Serviço Contratado <br>
+   https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/arquivos/servico_contratado.sql <br>
+   
+   Tabela Serviço Descrição <br>
+   https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/arquivos/servico_descricao.sql <br>
+   
+   Tabela Serviço <br>
+   https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/arquivos/servico_insert.sql<br>
+   
+   
+   
 #### 8.2 INCLUSÃO DO SCRIPT PARA CRIAÇÃO DE TABELA E INSERÇÃO DOS DADOS
-        a) Junção dos scripts anteriores em um único script 
-        (create para tabelas e estruturas de dados + dados a serem inseridos)
-        b) Criar um novo banco de dados para testar a restauracao 
-        (em caso de falha na restauração o grupo não pontuará neste quesito)
-        c) formato .SQL
+  BackuP<br>
+   https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/arquivos/backup_ido.sql<br>
+   
 #### 8.3 INCLUSÃO DO SCRIPT PARA EXCLUSÃO DE TABELAS EXISTENTES, CRIAÇÃO DE TABELA NOVAS E INSERÇÃO DOS DADOS
         a) Junção dos scripts anteriores em um único script 
         (Drop table + Create de tabelas e estruturas de dados + dados a serem inseridos)
@@ -126,7 +156,51 @@ Antes de mandar a solicitação, o requisitante tem acesso a uma tela que mostra
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
     OBS: Incluir para cada tópico as instruções SQL + imagens (print da tela) mostrando os resultados.<br>
 #### 9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
+   SELECT * FROM avaliacao;<br>
+    
+   ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/avaliacao.png)<br>
+   
+   SELECT * FROM bairro; <br>
+   ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/bairro.png)<br>
+
+   SELECT * FROM cartao; <br>
+   ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/cartao.png)<br>
+   
+   SELECT * FROM cep; <br>
+   ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/cep.png)<br>   
+
+   SELECT * FROM cidade; <br>
+   ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/cidade.png)<br>
+
+   SELECT * FROM contato; <br>
+   ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/contato.png)<br>
+   
+   SELECT * FROM endereco; <br>
+   ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/endereco.png)<br>
+   
+   SELECT * FROM estado; <br>
+   ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/estado.png)<br>
+
+   SELECT * FROM contato; <br>
+   ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/contato.png)<br>
+   
+   SELECT * FROM pessoa; <br>
+   ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/pessoa.png)<br>
+  
+   SELECT * FROM contato; <br>
+   ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/contato.png)<br>
+   
+   SELECT * FROM servico; <br>
+   ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/contato.png)<br>
+   
+   SELECT * FROM servico_contratado; <br>
+   ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/servico_contratado.png)<br>
+   
+   SELECT * FROM servico_descricao; <br>
+   ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/servico_descricao.png)<br>   
+   
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
+
 #### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E CAMPOS RENOMEADOS (Mínimo 6)
      a) Criar no mínimo 2 com operadores lógicos
      b) Criar no mínimo 2 com operadores aritméticos
