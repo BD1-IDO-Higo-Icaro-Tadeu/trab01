@@ -200,12 +200,44 @@ Antes de mandar a solicitação, o requisitante tem acesso a uma tela que mostra
    ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/servico_descricao.png)<br>   
    
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
-
+    SELECT * FROM pessoa WHERE cpf_id = 123456;; <br>
+   ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/pessoa_where.png)<br>
+   
+   SELECT * FROM estado where estado_id >5 and estado_id <= 12;<br>
+   ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/estado_where.png)<br>
+   
+   SELECT * FROM endereco WHERE cep_fid < 29000000;<br>
+   ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/cep_where.png)<br>
+   
+   SELECT * FROM servico_contratado WHERE prestador_fid = 666666;<br>
+   ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/servico_contratado_where.png)<br>   
+   
 #### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E CAMPOS RENOMEADOS (Mínimo 6)
-     a) Criar no mínimo 2 com operadores lógicos
-     b) Criar no mínimo 2 com operadores aritméticos
-     c) Criar no mínimo 2 com operação de renomear campo
+   SELECT *  FROM servico_descricao WHERE valor >= '10' and valor < '100'; <br>
+    ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/servico_descricao_logico.png)<br> 
+   
+   SELECT * FROM avaliacao WHERE nota > 3 or nota = 5;<br>
+   ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/avaliacao_logico.png)<br>   
+
+   SELECT (valor/2) AS metade FROM servico_descricao;<br>
+   ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/servico_descricao_metade_artimetico.png)<br>
+   
+   SELECT (valor+'100') AS maiscem FROM servico_descricao;<br>
+   ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/servico_descricao_artimeticomaiscem.png)<br>
+   
+     
 #### 9.4	CONSULTAS QUE USAM OPERADORES LIKE (Mínimo 4) <br>
+  SELECT * FROM pessoa where nome like '%_a'; <br>
+  ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/pessoa_likenome.png)<br>
+  
+  SELECT * FROM pessoa where nome ilike 'd%';<br>
+  ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/contato.png)<br>
+  
+  SELECT * FROM pessoa where email ilike 't%';<br>
+  ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/likeemailt.png)<br>
+  
+  SELECT * FROM pessoa where email like '_e%';<br>
+  ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/pessoa_likenomeE.png)<br>
 
 >## Marco de Entrega 03 em: (Data definida no cronograma)<br>
     
