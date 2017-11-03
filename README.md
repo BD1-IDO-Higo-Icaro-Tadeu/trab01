@@ -68,14 +68,9 @@ Antes de mandar a solicitação, o requisitante tem acesso a uma tela que mostra
     
  
 
-#### 5.3 DESCRIÇÃO DOS DADOS 
-    [objeto]: [descrição do objeto]
-    
-    EXEMPLO:
-    CLIENTE: Tabela que armazena as informações relativas ao cliente<br>
-    CPF: campo que armazena o número de Cadastro de Pessoa Física para cada cliente da empresa.<br>
---------------------------------------
-    PESSOA: tabela contém as informações de uma conta do aplicativo, composta pelos os campos:
+#### 5.3 DESCRIÇÃO DOS DADOS <br>
+
+   PESSOA: tabela contém as informações de uma conta do aplicativo, composta pelos os campos:
     
         - nome: campo que armazena o nome completo do usuário;
         - senha: campo que armazena a senha da conta no iDo;
@@ -155,19 +150,19 @@ Antes de mandar a solicitação, o requisitante tem acesso a uma tela que mostra
    
         - usuario_fid: campo de chaves estrangeira, para identificação do usuario que contratou um serviço;
         - servico_opcao: campo de chaves estrangeira, para identificação do usuario que prestou um serviço;
-        - minitexto: campo de chave estrangeira que indica qual serviço foi  oferecido.<br>
-        - descricao_id: 
-        - unidade: 
-        - foto:
-        - valor:
-        - servico_fid:<br>
+        - minitexto: campo de chave estrangeira que indica qual serviço foi  oferecido;
+        - descricao_id: campo armazena identificado do da tabela servico_descricao;
+        - unidade: campo armazena o tipo de unidade do serviço oferecido;
+        - foto: campo armazena foto do serviço feito pelo prestador;
+        - valor: armazena o valor do serviço ou NULL caso seja a combinar;
+        - servico_fid: tabela armazena chave estrangeira que indica o tipo de serviço oferecido<br>
         
    AVALIACAO: tabela armazena as informações de serviços contratado pelo usuario, composta pelos campo: <br>
    
-        - cliente_fid
-        - comentario: chaves estrangeira, para identificação do usuario que prestou um serviço;
-        - nota: campo de chave estrangeira que indica qual serviço foi  oferecido;
-        -prestador_id: <br>
+        - cliente_fid: campo de chaves estrangeira, para identificação do do usuario que contratou um serviço;
+        - comentario: campo armazena comentario, do usuário;
+        - nota: campo armazena nota avaliada pelo usuário;
+        -prestador_id: campo de chaves estrangeira, para identificação do do prestador de serviço.<br>
         
 ### 6	MODELO LÓGICO<br>
 ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/modelo_logico_IDO.jpg "Modelo Lógico")
