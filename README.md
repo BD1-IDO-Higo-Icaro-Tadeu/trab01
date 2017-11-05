@@ -216,14 +216,11 @@ Antes de mandar a solicitação, o requisitante tem acesso a uma tela que mostra
    
 #### 8.2 INCLUSÃO DO SCRIPT PARA CRIAÇÃO DE TABELA E INSERÇÃO DOS DADOS
   BackuP<br>
-   https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/arquivos/backup_ido.sql<br>
+   https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/arquivos/backup_ido.sql <br>
    
-#### 8.3 INCLUSÃO DO SCRIPT PARA EXCLUSÃO DE TABELAS EXISTENTES, CRIAÇÃO DE TABELA NOVAS E INSERÇÃO DOS DADOS
-        a) Junção dos scripts anteriores em um único script 
-        (Drop table + Create de tabelas e estruturas de dados + dados a serem inseridos)
-        b) Criar um novo banco de dados para testar a restauracao 
-        (em caso de falha na restauração o grupo não pontuará neste quesito)
-        c) formato .SQL
+#### 8.3 INCLUSÃO DO SCRIPT PARA EXCLUSÃO DE TABELAS EXISTENTES, CRIAÇÃO DE TABELA NOVAS E INSERÇÃO DOS DADOS <br>
+     https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/arquivos/drop_table.sql <br>
+
 
 
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
