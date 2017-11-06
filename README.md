@@ -80,7 +80,7 @@ Antes de mandar a solicitação, o requisitante tem acesso a uma tela que mostra
         - email: campo que armazena o email do usuário;
         - num_casa: armazena o numero da casa do usuário;
         - contato_fid: campo de chave estrangeira que armazena contatos de telefone ou celular;
-        - endereco_fid: campo de chave estrangeira com endereço, composto por, bairro, cep, cidade e estado;
+        - endereco_fid: campo de chave estrangeira com endereço, composto por bairro, cep, cidade e estado;
         - descricao_fid: campo de chave estrangeira que armazena detalhes sobre o serviço oferecido do usuário.
     
    CARTAO: tabela que armazena as informações do cartão de um usuário, composta pelos campos:
@@ -121,7 +121,7 @@ Antes de mandar a solicitação, o requisitante tem acesso a uma tela que mostra
    
         - cidade_id: campo que armazena um número de identificação da tabela cidade;
         - cidade: campo que armazena o nome da cidade; 
-        - estado_fid: campo de chave estrangeira, para identificação do estado na tabela cidade.; 
+        - estado_fid: campo de chave estrangeira, para identificação do estado na tabela cidade. 
 
    ESTADO: tabela que armazena as informações do estado da tabela de cidade, composta pelos campos:
    
@@ -148,9 +148,9 @@ Antes de mandar a solicitação, o requisitante tem acesso a uma tela que mostra
         - unidade: campo que armazena o tipo de unidade do serviço oferecido;
         - foto: campo que armazena uma foto do serviço feito pelo prestador;
         - valor: armazena o valor do serviço ou NULL caso seja a combinar;
-        - servico_fid: campo que armazena chave estrangeira que indica o tipo de serviço oferecido
+        - servico_fid: campo que armazena chave estrangeira que indica o tipo de serviço oferecido.
         
-   AVALIACAO: tabela armazena as informações de serviços contratado pelo usuario, composta pelos campos: 
+   AVALIACAO: tabela armazena as informações de serviços contratado pelo usuário, composta pelos campos: 
    
         - cliente_fid: campo de chave estrangeira, para identificação do usuário que contratou um serviço;
         - comentario: campo que armazena comentários feitos por um usuário (para avaliar um serviço);
