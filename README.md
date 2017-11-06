@@ -64,7 +64,7 @@ Antes de mandar a solicitação, o requisitante tem acesso a uma tela que mostra
     [Grupo02]: [Nomes dos que participaram na avaliação]
 
 #### 5.2 DECISÕES DE PROJETO
- Não houver nenhuma decisão.
+ Não houve nenhuma decisão.
     
  
 
@@ -79,10 +79,10 @@ Antes de mandar a solicitação, o requisitante tem acesso a uma tela que mostra
         - cpf_id: campo que armazena o CPF de um usuário, usado como chave primária já que duas pessoas não podem ter o mesmo CPF;
         - email: campo que armazena o email do usuário;
         - usuario: campo armazena  usuário da conta;
-        - num_casa: armazena o numero da casa do usuario;
-        - contato_fid: campo de chaves estrangeira que armazena contatos de telefone ou celular;
-        - endereco_fid: campo de chaves estrangeira com endereço, composto por, bairro, cep, cidade e estado;
-        - descricao_fid: campo de chaves estrangeira que armazena detalhes sobre o serviço oferecido do usurio.<br>
+        - num_casa: armazena o numero da casa do usuário;
+        - contato_fid: campo de chave estrangeira que armazena contatos de telefone ou celular;
+        - endereco_fid: campo de chave estrangeira com endereço, composto por, bairro, cep, cidade e estado;
+        - descricao_fid: campo de chave estrangeira que armazena detalhes sobre o serviço oferecido do usurio.<br>
     
    CARTAO: tabela armazena as informações do cartão de um usuário, composta pelos campo:
    
@@ -128,7 +128,7 @@ Antes de mandar a solicitação, o requisitante tem acesso a uma tela que mostra
    
         - cidade_id: campo que armazena um número de identificação da tabela cidade;
         - cidade: campo armazena o nome da cidade; 
-        - estado_fid: campo de chaves estrangeira, para identificação do estado na tabela cidade.; <br>
+        - estado_fid: campo de chave estrangeira, para identificação do estado na tabela cidade.; <br>
 
    ESTADO: tabela armazena as informações do estado da tabela de cidade, composta pelos campo:<br>
    
@@ -137,21 +137,21 @@ Antes de mandar a solicitação, o requisitante tem acesso a uma tela que mostra
      
    SERVICO_CONTRATADO: tabela armazena as informações de serviços contratado pelo usuario, composta pelos campo: <br>
    
-        - usuario_fid: campo de chaves estrangeira, para identificação do usuario que contratou um serviço;
-        - prestador_fid: campo de chaves estrangeira, para identificação do usuario que prestou um serviço;
+        - usuario_fid: campo de chave estrangeira, para identificação do usuario que contratou um serviço;
+        - prestador_fid: campo de chave estrangeira, para identificação do usuario que prestou um serviço;
         - servico_fid: campo de chave estrangeira que indica qual serviço foi  oferecido.<br>
         
   SERVICO: tabela armazena as informações de serviços oferecido pelos usuarios, composta pelos campo: <br>
    
-        - servico_fid: campo de chaves estrangeira, para identificação do usuario que contratou um serviço;
+        - servico_fid: campo de chave estrangeira, para identificação do usuario que contratou um serviço;
         - seervico_oferecido: campo de armazena o nome do serviço oferecido. <br>        
   
   SERVICO_DESCRICAO: tabela armazena as informações de serviços oferecido pelo usuario, composta pelos campo: <br>
    
-        - usuario_fid: campo de chaves estrangeira, para identificação do usuario que contratou um serviço;
-        - servico_opcao: campo de chaves estrangeira, para identificação do usuario que prestou um serviço;
-        - minitexto: campo de chave estrangeira que indica qual serviço foi  oferecido;
-        - descricao_id: campo armazena identificado do da tabela servico_descricao;
+        - usuario_fid: campo de chave estrangeira, para identificação do usuario que contratou um serviço;
+        - servico_opcao: campo de chave estrangeira, para identificação do usuario que prestou um serviço;
+        - minitexto: campo de chave estrangeira que indica qual serviço foi oferecido;
+        - descricao_id: campo armazena identificado da tabela servico_descricao;
         - unidade: campo armazena o tipo de unidade do serviço oferecido;
         - foto: campo armazena foto do serviço feito pelo prestador;
         - valor: armazena o valor do serviço ou NULL caso seja a combinar;
@@ -159,10 +159,10 @@ Antes de mandar a solicitação, o requisitante tem acesso a uma tela que mostra
         
    AVALIACAO: tabela armazena as informações de serviços contratado pelo usuario, composta pelos campo: <br>
    
-        - cliente_fid: campo de chaves estrangeira, para identificação do do usuario que contratou um serviço;
-        - comentario: campo armazena comentario, do usuário;
+        - cliente_fid: campo de chave estrangeira, para identificação do usuario que contratou um serviço;
+        - comentario: campo que armazena comentários feitos por um usuário (para avaliar um serviço);
         - nota: campo armazena nota avaliada pelo usuário;
-        -prestador_id: campo de chaves estrangeira, para identificação do do prestador de serviço.<br>
+        -prestador_id: campo de chave estrangeira, para identificação do prestador de serviço.<br>
         
 ### 6	MODELO LÓGICO<br>
 ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/modelo_logico_IDO.jpg "Modelo Lógico")
