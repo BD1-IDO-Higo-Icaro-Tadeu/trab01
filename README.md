@@ -27,7 +27,7 @@ Antes de mandar a solicitação, o requisitante tem acesso a uma tela que mostra
 
 
 #### 4.1 TABELA DE DADOS DO SISTEMA <br>
-  https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/campos%20I%20do.ods
+  https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/arquivos/campos%20I%20do.ods
     
     
 #### 4.2 QUAIS PERGUNTAS PODEM SER RESPONDIDAS COM O SISTEMA PROPOSTO?
