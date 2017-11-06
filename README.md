@@ -81,7 +81,7 @@ Antes de mandar a solicitação, o requisitante tem acesso a uma tela que mostra
         - num_casa: armazena o numero da casa do usuário;
         - contato_fid: campo de chave estrangeira que armazena contatos de telefone ou celular;
         - endereco_fid: campo de chave estrangeira com endereço, composto por, bairro, cep, cidade e estado;
-        - descricao_fid: campo de chave estrangeira que armazena detalhes sobre o serviço oferecido do usurio.
+        - descricao_fid: campo de chave estrangeira que armazena detalhes sobre o serviço oferecido do usuário.
     
    CARTAO: tabela armazena as informações do cartão de um usuário, composta pelos campo:
    
@@ -114,51 +114,51 @@ Antes de mandar a solicitação, o requisitante tem acesso a uma tela que mostra
    CEP: tabela armazena as informações do cep da tabela de endereço, composta pelos campo:<br>
    
         - cep_id: campo que armazena um número de identificação da tabela endereço;
-        - rua: campo armazena o nome da rua; 
+        - rua: campo que armazena o nome da rua; 
         - bairro_fid: campo de chave estrangeira, para identificação do bairro na tabela cep.   
 
    BAIRRO: tabela armazena as informações do bairro da tabela de cep, composta pelos campo: <br>
    
         - bairro_id: campo que armazena um número de identificação da tabela bairro;
-        - bairro: campo armazena o nome do bairro; 
-        - cidade_fid: campo de chaves estrangeira, para identificação do cidade na tabela bairro.
+        - bairro: campo que armazena o nome do bairro; 
+        - cidade_fid: campo de chave estrangeira, para identificação do cidade na tabela bairro.
         
    CIDADE: essa tabela armazena as informações da cidade da tabela de bairro, composta pelos campo: <br>
    
         - cidade_id: campo que armazena um número de identificação da tabela cidade;
-        - cidade: campo armazena o nome da cidade; 
+        - cidade: campo que armazena o nome da cidade; 
         - estado_fid: campo de chave estrangeira, para identificação do estado na tabela cidade.; 
 
    ESTADO: tabela armazena as informações do estado da tabela de cidade, composta pelos campo:<br>
    
         - estado_id: campo que armazena um número de identificação da tabela estado;
-        - sigla: campo armazena o sigla do estado.
+        - sigla: campo que armazena o sigla do estado.
      
-   SERVICO_CONTRATADO: tabela armazena as informações de serviços contratado pelo usuario, composta pelos campo: <br>
+   SERVICO_CONTRATADO: tabela que armazena as informações de serviços contratado pelo usuario, composta pelos campo: <br>
    
-        - usuario_fid: campo de chave estrangeira, para identificação do usuario que contratou um serviço;
-        - prestador_fid: campo de chave estrangeira, para identificação do usuario que prestou um serviço;
-        - servico_fid: campo de chave estrangeira que indica qual serviço foi  oferecido.
+        - usuario_fid: campo de chave estrangeira para identificação do usuario que contratou um serviço;
+        - prestador_fid: campo de chave estrangeira para identificação do usuario que prestou um serviço;
+        - servico_fid: campo de chave estrangeira que indica qual serviço foi oferecido.
         
   SERVICO: tabela armazena as informações de serviços oferecido pelos usuarios, composta pelos campo: <br>
    
         - servico_fid: campo de chave estrangeira, para identificação do usuario que contratou um serviço;
-        - seervico_oferecido: campo de armazena o nome do serviço oferecido.        
+        - seervico_oferecido: campo que armazena o nome do serviço oferecido.        
   
   SERVICO_DESCRICAO: tabela armazena as informações de serviços oferecido pelo usuario, composta pelos campo: <br>
    
         - usuario_fid: campo de chave estrangeira, para identificação de um usuario que contratou um serviço;
         - servico_opcao: campo de chave estrangeira, para identificação do usuario que prestou um serviço;
         - minitexto: campo de chave estrangeira que indica qual serviço foi oferecido;
-        - descricao_id: campo armazena identificado da tabela servico_descricao;
-        - unidade: campo armazena o tipo de unidade do serviço oferecido;
-        - foto: campo armazena foto do serviço feito pelo prestador;
+        - descricao_id: campo que armazena a identificação da tabela servico_descricao;
+        - unidade: campo que armazena o tipo de unidade do serviço oferecido;
+        - foto: campo que armazena uma foto do serviço feito pelo prestador;
         - valor: armazena o valor do serviço ou NULL caso seja a combinar;
         - servico_fid: campo que armazena chave estrangeira que indica o tipo de serviço oferecido
         
    AVALIACAO: tabela armazena as informações de serviços contratado pelo usuario, composta pelos campo: <br>
    
-        - cliente_fid: campo de chave estrangeira, para identificação do usuario que contratou um serviço;
+        - cliente_fid: campo de chave estrangeira, para identificação do usuário que contratou um serviço;
         - comentario: campo que armazena comentários feitos por um usuário (para avaliar um serviço);
         - nota: campo armazena nota avaliada pelo usuário;
         -prestador_id: campo de chave estrangeira, para identificação do prestador de serviço.
