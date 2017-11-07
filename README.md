@@ -60,7 +60,7 @@ Antes de mandar a solicitação, o requisitante tem acesso a uma tela que mostra
         
     
 #### 5.1 Validação do Modelo Conceitual
-    [Grupo01]: [Nomes dos que participaram na avaliação]
+    NETIFES: Ana Carorlina Cebin, Matheus Kleber Barbosa, Jardielma
     [Grupo02]: [Nomes dos que participaram na avaliação]
 
 #### 5.2 DECISÕES DE PROJETO
