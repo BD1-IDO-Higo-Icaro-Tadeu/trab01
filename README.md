@@ -169,41 +169,7 @@ Antes de mandar a solicitação, o requisitante tem acesso a uma tela que mostra
         
 ### 8	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
 #### 8.1 DETALHAMENTO DAS INFORMAÇÕES <br>
-   Tabela Avaliacão <br>
-   https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/arquivos/avaliacao_isert.sql <br>
-    
-   Tabela Bairro <br>
-   https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/arquivos/bairro_insert.sql <br>
-   
-   Tabela Cartão <br>
-   https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/arquivos/cartao_insert.sql <br>
-   
-   Tabela Cep <br>
-   https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/arquivos/cep_insert.sql <br>
-   
-   Tabela Cidade <br>
-   https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/arquivos/cidade_insert.sql <br>
-   
-   Tabela Contato <br>
-   https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/arquivos/contato_insert.sql <br>
-   
-   Tabela Endereço <br>
-   https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/arquivos/endereco_insert.sql <br>
-   
-   Tabela Estado <br>
-   https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/arquivos/estado_insert.sql <br>
-   
-   Tabela Pessoa <br>
-   https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/arquivos/pessoa_insert.sql <br>
-   
-   Tabela Serviço Contratado <br>
-   https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/arquivos/servico_contratado.sql <br>
-   
-   Tabela Serviço Descrição <br>
-   https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/arquivos/servico_descricao.sql <br>
-   
-   Tabela Serviço <br>
-   https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/arquivos/servico_insert.sql<br>
+   https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/arquivos/all%20inserts.sql <br>
    
    
    
@@ -263,7 +229,7 @@ Antes de mandar a solicitação, o requisitante tem acesso a uma tela que mostra
    ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/servico_descricao.png)<br>   
    
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
-    SELECT * FROM pessoa WHERE cpf_id = 123456;; <br>
+   SELECT * FROM pessoa WHERE cpf_id = 123456;<br>
    ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/pessoa_where.png)<br>
    
    SELECT * FROM estado where estado_id >5 and estado_id <= 12;<br>
@@ -294,7 +260,7 @@ Antes de mandar a solicitação, o requisitante tem acesso a uma tela que mostra
   ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/pessoa_likenome.png)<br>
   
   SELECT * FROM pessoa where nome ilike 'd%';<br>
-  ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/contato.png)<br>
+  ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/pessoanomeIilke.png)<br>
   
   SELECT * FROM pessoa where email ilike 't%';<br>
   ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/likeemailt.png)<br>
