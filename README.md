@@ -282,10 +282,8 @@ Antes de mandar a solicitação, o requisitante tem acesso a uma tela que mostra
 #### 9.10	SUBCONSULTAS (Mínimo 3)<br>
 ### 10	ATUALIZAÇÃO DA DOCUMENTAÇÃO DOS SLIDES PARA APRESENTAÇAO FINAL (Mínimo 6 e Máximo 10)<br>
 ### 11	TUTORIAL COMPLETO DE PASSOS PARA RESTAURACAO DO BANCO E EXECUCAO DE PROCEDIMENTOS ENVOLVIDOS NO TRABALHO PARA OBTENÇÃO DOS RESULTADOS<br>
-        a) Outros grupos deverão ser capazes de restaurar o banco 
-        b) executar todas as consultas presentes no trabalho
-        c) executar códigos que tenham sido construídos para o trabalho 
-        d) realizar qualquer procedimento executado pelo grupo que desenvolveu o trabalho
+        Para executar o back up do banco IDo, basta pegar o arquivo na secção 8.2 e  executar o script no PGAdmin.   
+
         
 ### 12   DIFICULDADES ENCONTRADAS PELO GRUPO<br>
 ### 13   TRABALHO DE MINERAÇÃO DE DADOS
