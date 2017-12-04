@@ -178,12 +178,12 @@ Antes de mandar a solicitação, o requisitante tem acesso a uma tela que mostra
    https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/arquivos/backup_ido.sql <br>
    
 #### 8.3 INCLUSÃO DO SCRIPT PARA EXCLUSÃO DE TABELAS EXISTENTES, CRIAÇÃO DE TABELA NOVAS E INSERÇÃO DOS DADOS <br>
-     https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/arquivos/drop_table.sql <br>
+   
+   https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/arquivos/drop_table.sql <br>
 
 
 
-### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
-    OBS: Incluir para cada tópico as instruções SQL + imagens (print da tela) mostrando os resultados.<br>
+### 9	TABELAS E PRINCIPAIS CONSULTAS<br><br>
 #### 9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
    SELECT * FROM avaliacao;<br>
     
@@ -209,15 +209,9 @@ Antes de mandar a solicitação, o requisitante tem acesso a uma tela que mostra
    
    SELECT * FROM estado; <br>
    ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/estado.png)<br>
-
-   SELECT * FROM contato; <br>
-   ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/contato.png)<br>
    
    SELECT * FROM pessoa; <br>
    ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/pessoa.png)<br>
-  
-   SELECT * FROM contato; <br>
-   ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/contato.png)<br>
    
    SELECT * FROM servico; <br>
    ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/contato.png)<br>
@@ -267,10 +261,27 @@ Antes de mandar a solicitação, o requisitante tem acesso a uma tela que mostra
   
   SELECT * FROM pessoa where email like '_e%';<br>
   ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/pessoa_likenomeE.png)<br>
-
->## Marco de Entrega 03 em: (Data definida no cronograma)<br>
     
 #### 9.5	ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
+   update pessoa set email =  'tadeu_junior@hotmail.com' where nome = 'Tadeu Junior';<br>
+   ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/update%20email.png)<br>
+   
+   update cartao  set nome_cartao = 'Lucas Gabriel Irinel' where nome_cartao = 'Lucas G Irinel';
+   ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/update%20cartao.png)<br>
+   
+   update  servico_descricao set valor = '150,00' where usuario_fid = 666666;<br>
+   ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/update%20servico%20descricao.png)<br>
+   
+   delete  from cartao where cartao_id = 9;<br>
+   ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/delete%20cartao.png)<br>
+   
+   delete from servico_contratado where usuario_fid = 222222;<br>
+   ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/servico%20contratado%20delete.png)<br>
+   
+   update cep set rua = 'Rua Neutra' where cep_id = 29000000;<br>
+   ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/update%20cep.png)<br>
+   
+   
 #### 9.6	CONSULTAS COM JUNÇÃO E ORDENAÇÃO (Mínimo 6)<br>
         a) Uma junção que envolva todas as tabelas possuindo no mínimo 3 registros no resultado
         b) Outras junções que o grupo considere como sendo as de principal importância para o trabalho
