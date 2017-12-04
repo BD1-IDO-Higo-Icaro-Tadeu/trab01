@@ -9,9 +9,8 @@ cep_id INTEGER PRIMARY KEY
 );
 
 CREATE TABLE contato (
-celular INTEGER,
-telefone INTEGER,
-contato_id SERIAL PRIMARY KEY,
+contato varchar(100),
+tipo_contato varchar(100),    
 usuario_fid INTEGER
 );
 
@@ -192,31 +191,43 @@ insert into endereco (cep_fid,usuario_fid) values
 (12365589,123456);
 
 insert into pessoa (nome,email, rg, senha, num_casa,cpf_id,endereco_fid, usuario,contato_fid,servico_fid,descricao_fid) values 
-('Tadeu Junior',	'tadeu@gmail.com',	223344,	'11111',	55,111111,1,'Tadeu',1,2,1),
-('Yan de Paula','yan@gmail.com',887766,	'22222',	456,222222,4,'Yan',2,1,2),
-('Ewerson Vieira',	'ewerson@gmail.com',	323456,	'33333',	89,333333,5,'Ewerson',3,3,3),
-('Lucas Gomes Irinel',	'luca-irinel@gmail.com',	265260,	'44444',	86,444444,6,'Lucas',4,4,4),
-('Icaro Duarte'	,'icaro@gmail.com',	223344,	'55555',	47,555555,7,'Icaro',5,1,5),
-('David Vilaca', 'david@gmail.com',	445566,	'66666',	22,666666,8,'David',6,7,6),
-('Leandro Goias', 'leandro@gmail.com',	778899,	'77777',	36,777777,9,'Leandro',7,9,7),
-('Luiz Melodia','luiz@gmail.com',	345234,	'88888',	35,888888,3,'Luiz',8,9,8),
-('Elimar Lolzin',	'elimar@gmail.com',	567533, '99999',	327,999999,1,'Elimar',9,10,9),
-('Julio Faker',	'julio@gmail.com',	456789,	'12345',	641,123456,2,'Julio',10,11,10);
+('Tadeu Junior',	'tadeu@gmail.com',	223344,	'11111',	55,111111,1,'Tadeu',2,1),
+('Yan de Paula','yan@gmail.com',887766,	'22222',	456,222222,4,'Yan',1,2),
+('Ewerson Vieira',	'ewerson@gmail.com',	323456,	'33333',	89,333333,5,'Ewerson',3,3),
+('Lucas Gomes Irinel',	'luca-irinel@gmail.com',	265260,	'44444',	86,444444,6,'Lucas',4,4),
+('Icaro Duarte'	,'icaro@gmail.com',	223344,	'55555',	47,555555,7,'Icaro',1,5),
+('David Vilaca', 'david@gmail.com',	445566,	'66666',	22,666666,8,'David',7,6),
+('Leandro Goias', 'leandro@gmail.com',	778899,	'77777',	36,777777,9,'Leandro',9,7),
+('Luiz Melodia','luiz@gmail.com',	345234,	'88888',	35,888888,3,'Luiz',9,8),
+('Elimar Lolzin',	'elimar@gmail.com',	567533, '99999',	327,999999,1,'Elimar',10,9),
+('Julio Faker',	'julio@gmail.com',	456789,	'12345',	641,123456,2,'Julio',11,10);
 
 
 /*CONTATO*/
 
-insert into contato (celular,telefone,usuario_fid,contato_id) values
-(998765432,	33480939,	111111,1),
-(987654321,	22228876,	222222,2),
-(912345678,	33398726,	333333,3),
-(903625347,	33448765,	444444,4),
-(999876543,	33876529,	555555,5),
-(988765432,	34567839,	666666,6),
-(977865432,	32987654,	777777,7),
-(988766543,	34568976,	888888,8),
-(999988877,	34567892,	999999,9),
-(990473645,	34987654,	123456,10);
+/*CONTATO*/
+
+insert into contato (contato,usuario_fid,tipo_contato) values
+('33480939',111111,'telefone'),
+('998765432',111111,'celular'),
+('22228876',222222,'telefone'),
+('987654321',222222,'celular'),
+('912345678',333333,'celular'),
+('33398726',333333,'telefone'),
+('903625347',444444,'celular'),
+('33448765',444444,'telefone'),
+('999876543',555555,'celular'),
+('33876529',555555,'telefone'),
+('988765432',666666,'celular'),
+('34567839',666666,'telefone'),
+('977865432',777777,'celular'),
+('32987654',777777,'telefone'),
+('988766543',888888,'celular'),
+('34568976',888888,'telefone'),
+('999988877',999999,'celular'),
+('34567892',999999,'telefone'),
+('990473645',123456,'celular'),
+('34987654',123456,'telefone');
 
 /*Cartao*/
 alter table cartao alter column numero_cartao type varchar (50);
@@ -277,8 +288,4 @@ insert into avaliacao (cliente_fid,comentario,servico_fid,nota,prestador_fid) va
 ALTER TABLE servico_descricao ADD FOREIGN KEY(servico_fid) REFERENCES servico (servico_id);
 ALTER TABLE servico_descricao ADD FOREIGN KEY(usuario_fid) REFERENCES pessoa (cpf_id);
 ALTER TABLE pessoa ADD FOREIGN KEY(descricao_fid) REFERENCES servico_descricao (descricao_id);
-ALTER TABLE pessoa ADD FOREIGN KEY(contato_fid) REFERENCES contato (contato_id);
 ALTER TABLE endereco ADD FOREIGN KEY(usuario_fid) REFERENCES pessoa (cpf_id);
-
-
-
