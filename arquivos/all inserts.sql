@@ -1,6 +1,118 @@
 /*inserts*/
 /*SERVIÇO OFERECIDO*/
 
+CREATE TABLE cep (
+bairro_fid INTEGER,
+rua VARCHAR(50),
+cep_id INTEGER PRIMARY KEY
+);
+
+CREATE TABLE contato (
+contato varchar(100),
+tipo_contato varchar(100),    
+usuario_fid INTEGER
+);
+
+CREATE TABLE avaliacao (
+comentario VARCHAR(100),
+nota INTEGER,
+prestador_fid INTEGER,
+cliente_fid INTEGER,
+servico_fid INTEGER
+);
+
+CREATE TABLE cartao (
+nome_cartao VARCHAR(50),
+numero_cartao INTEGER,
+cvv INTEGER,
+validade DATE,
+cartao_id serial PRIMARY KEY,
+cliente_fid INTEGER
+);
+
+CREATE TABLE servico_descricao (
+servico_fid INTEGER,
+valor MONEY,
+foto VARCHAR(40),
+unidade VARCHAR(30),
+usuario_fid INTEGER,
+servico_opcao VARCHAR(100),
+minitexto VARCHAR(200),
+descricao_id SERIAL PRIMARY KEY
+);
+
+CREATE TABLE bairro (
+bairro VARCHAR(50),
+cidade_fid INTEGER,
+bairro_id SERIAL PRIMARY KEY
+);
+
+CREATE TABLE pessoa (
+usuario VARCHAR(50),
+nome VARCHAR(50),
+num_casa INTEGER,
+contato_fid INTEGER,
+senha VARCHAR(40),
+servico_fid INTEGER,
+email VARCHAR(50),
+cpf_id INTEGER PRIMARY KEY,
+endereco_fid INTEGER,
+descricao_fid INTEGER,
+rg INTEGER
+);
+
+CREATE TABLE estado (
+sigla VARCHAR(2),
+estado_id SERIAL PRIMARY KEY
+);
+
+CREATE TABLE cidade (
+cidade VARCHAR(50),
+estado_fid INTEGER,
+cidade_id SERIAL PRIMARY KEY,
+FOREIGN KEY(estado_fid) REFERENCES estado (estado_id)
+);
+
+CREATE TABLE servico (
+servico_id SERIAL PRIMARY KEY,
+servico_oferecido VARCHAR(100)
+);
+
+CREATE TABLE endereco (
+cep_fid INTEGER,
+endereco_id SERIAL PRIMARY KEY,
+usuario_fid INTEGER,
+FOREIGN KEY(cep_fid) REFERENCES cep (cep_id)
+);
+
+CREATE TABLE servico_contratado (
+usuario_fid INTEGER,
+prestador_fid INTEGER,
+servico_fid INTEGER,
+servico_descricao_fid INTEGER,
+FOREIGN KEY(usuario_fid) REFERENCES pessoa (cpf_id),
+FOREIGN KEY(prestador_fid) REFERENCES pessoa (cpf_id),
+FOREIGN KEY(servico_fid) REFERENCES servico (servico_id)
+);
+
+ALTER TABLE cep ADD FOREIGN KEY(bairro_fid) REFERENCES bairro (bairro_id);
+ALTER TABLE contato ADD FOREIGN KEY(usuario_fid) REFERENCES pessoa (cpf_id);
+ALTER TABLE avaliacao ADD FOREIGN KEY(prestador_fid) REFERENCES pessoa (cpf_id);
+ALTER TABLE avaliacao ADD FOREIGN KEY(cliente_fid) REFERENCES pessoa (cpf_id);
+ALTER TABLE avaliacao ADD FOREIGN KEY(servico_fid) REFERENCES servico (servico_id);
+ALTER TABLE cartao ADD FOREIGN KEY(cliente_fid) REFERENCES pessoa (cpf_id);
+ALTER TABLE bairro ADD FOREIGN KEY(cidade_fid) REFERENCES cidade (cidade_id);
+ALTER TABLE pessoa ADD FOREIGN KEY(servico_fid) REFERENCES servico (servico_id);
+ALTER TABLE pessoa ADD FOREIGN KEY(endereco_fid) REFERENCES endereco (endereco_id);
+
+
+
+
+
+
+/*inserts*/
+/*SERVIÇO OFERECIDO*/
+
 insert into servico (servico_oferecido) values
 ('cliente'),
 ('pintor'),
@@ -78,31 +190,43 @@ insert into endereco (cep_fid,usuario_fid) values
 (12365589,123456);
 
 insert into pessoa (nome,email, rg, senha, num_casa,cpf_id,endereco_fid, usuario,contato_fid,servico_fid,descricao_fid) values 
-('Tadeu Junior',	'tadeu@gmail.com',	223344,	'11111',	55,111111,1,'Tadeu',1,2,1),
-('Yan de Paula','yan@gmail.com',887766,	'22222',	456,222222,4,'Yan',2,1,2),
-('Ewerson Vieira',	'ewerson@gmail.com',	323456,	'33333',	89,333333,5,'Ewerson',3,3,3),
-('Lucas Gomes Irinel',	'luca-irinel@gmail.com',	265260,	'44444',	86,444444,6,'Lucas',4,4,4),
-('Icaro Duarte'	,'icaro@gmail.com',	223344,	'55555',	47,555555,7,'Icaro',5,1,5),
-('David Vilaca', 'david@gmail.com',	445566,	'66666',	22,666666,8,'David',6,7,6),
-('Leandro Goias', 'leandro@gmail.com',	778899,	'77777',	36,777777,9,'Leandro',7,9,7),
-('Luiz Melodia','luiz@gmail.com',	345234,	'88888',	35,888888,3,'Luiz',8,9,8),
-('Elimar Lolzin',	'elimar@gmail.com',	567533, '99999',	327,999999,1,'Elimar',9,10,9),
-('Julio Faker',	'julio@gmail.com',	456789,	'12345',	641,123456,2,'Julio',10,11,10);
+('Tadeu Junior',	'tadeu@gmail.com',	223344,	'11111',	55,111111,1,'Tadeu',2,1),
+('Yan de Paula','yan@gmail.com',887766,	'22222',	456,222222,4,'Yan',1,2),
+('Ewerson Vieira',	'ewerson@gmail.com',	323456,	'33333',	89,333333,5,'Ewerson',3,3),
+('Lucas Gomes Irinel',	'luca-irinel@gmail.com',	265260,	'44444',	86,444444,6,'Lucas',4,4),
+('Icaro Duarte'	,'icaro@gmail.com',	223344,	'55555',	47,555555,7,'Icaro',1,5),
+('David Vilaca', 'david@gmail.com',	445566,	'66666',	22,666666,8,'David',7,6),
+('Leandro Goias', 'leandro@gmail.com',	778899,	'77777',	36,777777,9,'Leandro',9,7),
+('Luiz Melodia','luiz@gmail.com',	345234,	'88888',	35,888888,3,'Luiz',9,8),
+('Elimar Lolzin',	'elimar@gmail.com',	567533, '99999',	327,999999,1,'Elimar',10,9),
+('Julio Faker',	'julio@gmail.com',	456789,	'12345',	641,123456,2,'Julio',11,10);
 
 
 /*CONTATO*/
 
-insert into contato (celular,telefone,usuario_fid,contato_id) values
-(998765432,	33480939,	111111,1),
-(987654321,	22228876,	222222,2),
-(912345678,	33398726,	333333,3),
-(903625347,	33448765,	444444,4),
-(999876543,	33876529,	555555,5),
-(988765432,	34567839,	666666,6),
-(977865432,	32987654,	777777,7),
-(988766543,	34568976,	888888,8),
-(999988877,	34567892,	999999,9),
-(990473645,	34987654,	123456,10);
+/*CONTATO*/
+
+insert into contato (contato,usuario_fid,tipo_contato) values
+('33480939',111111,'telefone'),
+('998765432',111111,'celular'),
+('22228876',222222,'telefone'),
+('987654321',222222,'celular'),
+('912345678',333333,'celular'),
+('33398726',333333,'telefone'),
+('903625347',444444,'celular'),
+('33448765',444444,'telefone'),
+('999876543',555555,'celular'),
+('33876529',555555,'telefone'),
+('988765432',666666,'celular'),
+('34567839',666666,'telefone'),
+('977865432',777777,'celular'),
+('32987654',777777,'telefone'),
+('988766543',888888,'celular'),
+('34568976',888888,'telefone'),
+('999988877',999999,'celular'),
+('34567892',999999,'telefone'),
+('990473645',123456,'celular'),
+('34987654',123456,'telefone');
 
 /*Cartao*/
 alter table cartao alter column numero_cartao type varchar (50);
@@ -146,12 +270,21 @@ insert into  servico_descricao (usuario_fid,servico_opcao,unidade,valor,servico_
 (999999,	'dia',	'valor fixo',	'300,00',	3,	'foto arroz','Tempero de Mae'),
 (123456,	'hora',	'a combinar',	NULL,	11,	'foto banheiro','Me contratae e nao se arrependa');
 
-
+/*AVALIACAO*/
+insert into avaliacao (cliente_fid,comentario,servico_fid,nota,prestador_fid) values
+(111111,	'blabla',	10,3.5, 999999),
+(222222,	'blabla',	11,4.9,	123456),
+(333333,	'blabla',	7,3.1,	666666),
+(444444,	'blabla',	7,2.3,	666666),
+(555555,	'blabla',	11,3.5,	123456),
+(666666,	'blabla',	9,2.0,	888888),
+(777777,	'blabla',	11,1.0,	123456),
+(888888,	'blabla',	10,3.6,	999999),
+(999999,	'blabla',	7,1.1,	666666),
+(123456,	'blabla',	3,2.6,	333333);
 
 /*Chaves necessarias*/
 ALTER TABLE servico_descricao ADD FOREIGN KEY(servico_fid) REFERENCES servico (servico_id);
 ALTER TABLE servico_descricao ADD FOREIGN KEY(usuario_fid) REFERENCES pessoa (cpf_id);
 ALTER TABLE pessoa ADD FOREIGN KEY(descricao_fid) REFERENCES servico_descricao (descricao_id);
-ALTER TABLE pessoa ADD FOREIGN KEY(contato_fid) REFERENCES contato (contato_id);
 ALTER TABLE endereco ADD FOREIGN KEY(usuario_fid) REFERENCES pessoa (cpf_id);
-
