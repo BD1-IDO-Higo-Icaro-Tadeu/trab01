@@ -44,7 +44,7 @@ Antes de mandar a solicitação, o requisitante tem acesso a uma tela que mostra
     4- Relatório de Serviços contratados;
     5- Relatória de Serviços Realizados;
     6- Relatório de Serviços de um estado;
-    7- Relatório de Métodos de pagamento utilizados;
+    
     
     
     
@@ -93,10 +93,9 @@ Antes de mandar a solicitação, o requisitante tem acesso a uma tela que mostra
         - usuario_fid: campo de chave estrangeira, para identificação do dono do cartao. 
    
    CONTATO: tabela que armazena as informações de contatos do usuário, composta pelos campos:
-   
-        - contato_id: campo que armazena um número de identificação da tabela contato;
-        - celular: campo que armazena numero do celular do usuário;
-        - telefone: campo que armazena numero de telefone do usuário;
+  
+        - tipo_contato: campo que armazena tipo de contato armazenado;
+        - contato: campo que armazena informações do contato;
         - usuario_fid: campo de chave estrangeira, para identificação do usuário na tabela contato.
     
    ENDERECO: tabela que armazena as informações do endereço do usuário, composta pelos campos:
@@ -283,13 +282,102 @@ Antes de mandar a solicitação, o requisitante tem acesso a uma tela que mostra
    
    
 #### 9.6	CONSULTAS COM JUNÇÃO E ORDENAÇÃO (Mínimo 6)<br>
-        a) Uma junção que envolva todas as tabelas possuindo no mínimo 3 registros no resultado
-        b) Outras junções que o grupo considere como sendo as de principal importância para o trabalho
+  select * from pessoa 
+  inner join cartao on (pessoa.cpf_id = cartao.cliente_fid)
+  order by pessoa.usuario asc;<br>
+  ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/innerjoin%20pessoa_cartao%20orderby.png)<br>
+  
+  select * from cidade
+  inner join estado on (cidade.estado_fid = estado.estado_id)
+  order by estado.sigla desc;<br>
+  ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/innerjoin%20estado_cidade%20orderby.png)<br>
+  
+  select * from cartao 
+  inner join pessoa on ( pessoa.cpf_id = cartao.cliente_fid)
+  order by cartao.validade asc;<br>
+  ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/innerjoin%20pessoa_cartao_orderbyValidade.png)<br>
+  
+  select * from endereco
+  inner join cep on (endereco.cep_fid = cep.cep_id) 
+  order by cep.rua desc;<br>
+  ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/innerjoin%20endereco_cep%20orderby.png)<br>
+  
+  select servico.servico_oferecido, pessoa.nome from pessoa 
+  inner join servico on (servico.servico_id = pessoa.servico_fid)
+  order by servico.servico_oferecido;<br>
+  ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/innerjoin%20pessoa_servico%20ordeby.png)<br>
+  
+  select pessoa.nome, endereco.cep_fid from pessoa 
+  inner join endereco on (endereco.endereco_id = pessoa.endereco_fid)
+  order by endereco.endereco_id;<br>
+  ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/endereco%20_pessoa%20orderby.png)<br>
+   
 #### 9.7	CONSULTAS COM GROUP BY E FUNÇES DE AGRUPAMENTO (Mínimo 6)<br>
+   select pessoa.email from pessoa
+   inner join contato on (pessoa.cpf_id =  contato.usuario_fid) 
+   group by pessoa.email;<br>
+   ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/innerjoin_grounpby%20pessoa_contato.png)<br>
+   
+  select avaliacao.prestador_fid from avaliacao 
+  inner join pessoa on (pessoa.cpf_id = avaliacao.cliente_fid)
+  group by avaliacao.prestador_fid;<br>
+  ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/innerjoin_grounpby%20pessoa_avaliacao.png)<br>
+
+  select servico_descricao.servico_fid from servico_descricao
+  inner join servico on (servico_descricao.servico_fid = servico.servico_id)
+  group by servico_descricao.servico_fid;<br>
+  ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/innerjoin_grounpby%20servico_descricao_servico.png)<br>
+
+  select endereco.usuario_fid from pessoa
+  inner join endereco on (pessoa.endereco_fid = endereco.endereco_id)
+  group by endereco.usuario_fid;<br>
+  ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/innerjoin_grounpby%20pessoa_endereco.png)<br>
+
+  select endereco.usuario_fid from pessoa
+  inner join endereco on (pessoa.endereco_fid = endereco.endereco_id)
+  group by endereco.usuario_fid
+  having  endereco.usuario_fid > 555555;<br>
+  ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/innerjoin_grounpby%20pessoa_endereco.png_having.png.png)<br>
+
+  select avaliacao.nota  from avaliacao 
+  inner join pessoa on (pessoa.cpf_id = avaliacao.cliente_fid)
+  group by avaliacao.nota
+  having avaliacao.nota >= 3a);<br>
+  ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/innerjoin_grounpby%20pessoa_avaliacao_nota_having.png);<br>
+  
 #### 9.8	CONSULTAS COM LEFT E RIGHT JOIN (Mínimo 4)<br>
+  select pessoa.nome, pessoa.cpf_id, servico_contratado.prestador_fid from pessoa 
+  Right outer Join servico_contratado on (pessoa.cpf_id = servico_contratado.prestador_fid);<br>
+
+  select pessoa.nome, pessoa.cpf_id, servico_contratado.prestador_fid from pessoa 
+  Left outer Join servico_contratado on (pessoa.cpf_id = servico_contratado.prestador_fid);<br>
+
+  select pessoa.nome,contato.tipo_contato,contato.contato from contato 
+  Right outer Join  pessoa on (pessoa.cpf_id = contato.usuario_fid) where contato.tipo_contato = 'telefone';<br>
+  
 #### 9.9	CONSULTAS COM SELF JOIN E VIEW (Mínimo 6)<br>
-        a) Uma junção que envolva Self Join
-        b) Outras junções com views que o grupo considere como sendo de relevante importância para o trabalho
+  create view contato_usuario as select pessoa.nome,contato.tipo_contato,contato.contato from contato 
+  inner Join  pessoa on (pessoa.cpf_id = contato.usuario_fid);
+  select * from contato_usuario;<br>
+
+  create view servico_oferecido as select servico,pessoa.nome from pessoa 
+  inner join servico on (pessoa.servico_fid = servico.servico_id) where servico_fid >1;
+  select * from  servico_oferecido;<br>
+
+  create view usuario_email_tel as select pessoa.nome as usuario,pessoa.email,contato.contato from pessoa
+  inner join contato on (pessoa.cpf_id =  contato.usuario_fid) where tipo_contato = 'telefone';
+  select * from usuario_email_tel;<br>
+
+
+  create view localidade as select estado, bairro, cidade from cidade
+  inner join estado on (cidade.estado_fid = estado.estado_id)
+  inner join bairro on (bairro.bairro_id = cidade.cidade_id);
+  select * from localidade;<br>
+
+  create view prestadores_servico as select servico.servico_oferecido, pessoa.nome from pessoa 
+  inner join servico on (servico.servico_id = pessoa.servico_fid);
+  select * from prestadores_servico;<br>
+
 #### 9.10	SUBCONSULTAS (Mínimo 3)<br>
 ### 10	ATUALIZAÇÃO DA DOCUMENTAÇÃO DOS SLIDES PARA APRESENTAÇAO FINAL (Mínimo 6 e Máximo 10)<br>
 ### 11	TUTORIAL COMPLETO DE PASSOS PARA RESTAURACAO DO BANCO E EXECUCAO DE PROCEDIMENTOS ENVOLVIDOS NO TRABALHO PARA OBTENÇÃO DOS RESULTADOS<br>
