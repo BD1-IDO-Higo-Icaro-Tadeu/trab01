@@ -359,26 +359,44 @@ Antes de mandar a solicitação, o requisitante tem acesso a uma tela que mostra
   create view contato_usuario as select pessoa.nome,contato.tipo_contato,contato.contato from contato 
   inner Join  pessoa on (pessoa.cpf_id = contato.usuario_fid);
   select * from contato_usuario;<br>
+  ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/view%20contato_usuario.png)<br>
 
   create view servico_oferecido as select servico,pessoa.nome from pessoa 
   inner join servico on (pessoa.servico_fid = servico.servico_id) where servico_fid >1;
   select * from  servico_oferecido;<br>
+  ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/view%20servico_oferecido.png)<br>
 
   create view usuario_email_tel as select pessoa.nome as usuario,pessoa.email,contato.contato from pessoa
   inner join contato on (pessoa.cpf_id =  contato.usuario_fid) where tipo_contato = 'telefone';
   select * from usuario_email_tel;<br>
+  ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/view%20usuario_email.png)<br>
 
 
   create view localidade as select estado, bairro, cidade from cidade
   inner join estado on (cidade.estado_fid = estado.estado_id)
   inner join bairro on (bairro.bairro_id = cidade.cidade_id);
   select * from localidade;<br>
+  ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/view%20localidade.png)<br>
 
   create view prestadores_servico as select servico.servico_oferecido, pessoa.nome from pessoa 
   inner join servico on (servico.servico_id = pessoa.servico_fid);
   select * from prestadores_servico;<br>
+  ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/prestadores_servico.png)<br>
 
 #### 9.10	SUBCONSULTAS (Mínimo 3)<br>
+  select pessoa.nome,contato.tipo_contato, contato.contato from contato
+  inner join pessoa on (pessoa.cpf_id =  contato.usuario_fid) where  contato.tipo_contato in (select tipo_contato from contato where       tipo_contato = 'telefone');<br>
+  ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/subconsullta%20tipocontato.png)<br>
+  
+  select pessoa.nome,servico.servico_oferecido from servico
+  inner join pessoa on (pessoa.servico_fid =  servico.servico_id) where  servico.servico_oferecido in (select servico_oferecido from       servico  where  servico_oferecido  <> 'cliente');<br>
+  ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/subconsullta%20servicooferecido.png)<br>
+
+  select pessoa.nome, servico.servico_oferecido as servico_contratado, avaliacao.nota from avaliacao
+  inner join pessoa on (avaliacao.cliente_fid = pessoa.cpf_id)
+  inner join servico on (avaliacao.servico_fid = servico.servico_id)where avaliacao.nota in ( select nota from servico where nota <= 3);<br>
+  ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/subconsullta%20servicocontratadonota.png)<br>
+  
 ### 10	ATUALIZAÇÃO DA DOCUMENTAÇÃO DOS SLIDES PARA APRESENTAÇAO FINAL (Mínimo 6 e Máximo 10)<br>
 ### 11	TUTORIAL COMPLETO DE PASSOS PARA RESTAURACAO DO BANCO E EXECUCAO DE PROCEDIMENTOS ENVOLVIDOS NO TRABALHO PARA OBTENÇÃO DOS RESULTADOS<br>
         Para executar o back up do banco IDo, basta pegar o arquivo na secção 8.2 e  executar o script no PGAdmin.   
