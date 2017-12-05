@@ -348,14 +348,17 @@ Antes de mandar a solicitação, o requisitante tem acesso a uma tela que mostra
 #### 9.8	CONSULTAS COM LEFT E RIGHT JOIN (Mínimo 4)<br>
   select pessoa.nome, pessoa.cpf_id, servico_contratado.prestador_fid from pessoa 
   Right outer Join servico_contratado on (pessoa.cpf_id = servico_contratado.prestador_fid);<br>
+  ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/rigthjoin%20pessoa_servico_contratado.png)<br>
 
   select pessoa.nome, pessoa.cpf_id, servico_contratado.prestador_fid from pessoa 
   Left outer Join servico_contratado on (pessoa.cpf_id = servico_contratado.prestador_fid);<br>
+  ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/Leftjoin%20pessoa_servico_contratado.png)<br>
 
   select pessoa.nome,contato.tipo_contato,contato.contato from contato 
   Right outer Join  pessoa on (pessoa.cpf_id = contato.usuario_fid) where contato.tipo_contato = 'telefone';<br>
+  ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/rigthjoin%20pessoa%20contato.png)<br>
   
-#### 9.9	CONSULTAS COM SELF JOIN E VIEW (Mínimo 6)<br>
+#### 9.9	CONSULTAS COM SELF JOIN E VIEW <br>
   create view contato_usuario as select pessoa.nome,contato.tipo_contato,contato.contato from contato 
   inner Join  pessoa on (pessoa.cpf_id = contato.usuario_fid);
   select * from contato_usuario;<br>
@@ -383,7 +386,7 @@ Antes de mandar a solicitação, o requisitante tem acesso a uma tela que mostra
   select * from prestadores_servico;<br>
   ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/prestadores_servico.png)<br>
 
-#### 9.10	SUBCONSULTAS (Mínimo 3)<br>
+#### 9.10	SUBCONSULTAS <br>
   select pessoa.nome,contato.tipo_contato, contato.contato from contato
   inner join pessoa on (pessoa.cpf_id =  contato.usuario_fid) where  contato.tipo_contato in (select tipo_contato from contato where       tipo_contato = 'telefone');<br>
   ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/subconsullta%20tipocontato.png)<br>
@@ -398,12 +401,17 @@ Antes de mandar a solicitação, o requisitante tem acesso a uma tela que mostra
   ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/subconsullta%20servicocontratadonota.png)<br>
   
 ### 10	ATUALIZAÇÃO DA DOCUMENTAÇÃO DOS SLIDES PARA APRESENTAÇAO FINAL (Mínimo 6 e Máximo 10)<br>
+  chegando<br>
 ### 11	TUTORIAL COMPLETO DE PASSOS PARA RESTAURACAO DO BANCO E EXECUCAO DE PROCEDIMENTOS ENVOLVIDOS NO TRABALHO PARA OBTENÇÃO DOS RESULTADOS<br>
         Para executar o back up do banco IDo, basta pegar o arquivo na secção 8.2 e  executar o script no PGAdmin.   
 
         
 ### 12   DIFICULDADES ENCONTRADAS PELO GRUPO<br>
-### 13   TRABALHO DE MINERAÇÃO DE DADOS
+
+   * Divisão de tarefas;
+   * Encontrar tabela para left Join, pois quase todas fazem ligaçã;<br>
+   
+### 13   TRABALHO DE MINERAÇÃO DE DADOS <br>
         a) captura das informaçõs
         b) integração com banco de dados em desenvolvimento
         c) atualização da documentação do trabalho incluindo a mineração de dados
@@ -417,16 +425,3 @@ Antes de mandar a solicitação, o requisitante tem acesso a uma tela que mostra
     c) informar aqui o grupo de alunos/dupla que realizou o teste.
     
 >## Marco de Entrega 04/Entrega Final em: (Data definida no cronograma)<br>
-    
-### OBSERVAÇÕES IMPORTANTES
-
-#### Todos os arquivos que fazem parte do projeto (Imagens, pdfs, arquivos fonte, etc..), devem estar presentes no GIT. Os arquivos do projeto vigente não devem ser armazenados em quaisquer outras plataformas.
-1. Caso existam arquivos com conteúdos sigilosos, comunicar o professor que definirá em conjunto com o grupo a melhor forma de armazenamento do arquivo.
-
-#### Todos os grupos deverão fazer Fork deste repositório e dar permissões administrativas ao usuário deste GIT, para acompanhamento do trabalho.
-
-#### Os usuários criados no GIT devem possuir o nome de identificação do aluno (não serão aceitos nomes como Eu123, meuprojeto, pro456, etc). Em caso de dúvida comunicar o professor.
-
-
-Link para BrModelo:<br>
-http://sis4.com/brModelo/brModelo/download.html
