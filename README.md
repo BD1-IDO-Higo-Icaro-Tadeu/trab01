@@ -61,7 +61,7 @@ Antes de mandar a solicitação, o requisitante tem acesso a uma tela que mostra
     
 #### 5.1 Validação do Modelo Conceitual
     NETIFES: Ana Carorlina Cebin, Matheus Kleber Barbosa, Jardielma
-    [Grupo02]: [Nomes dos que participaram na avaliação]
+    
 
 #### 5.2 DECISÕES DE PROJETO
  Não houve nenhuma decisão.
@@ -162,7 +162,7 @@ Antes de mandar a solicitação, o requisitante tem acesso a uma tela que mostra
 >## Marco de Entrega 02 em: (Data definida no cronograma)<br>
 
 ### 7	MODELO FÍSICO<br>
-     https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/arquivos/criacao%20de%20tabela%20ido.sql
+   https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/arquivos/criacao%20de%20tabela%20ido.sql
 
        
         
@@ -409,19 +409,16 @@ Antes de mandar a solicitação, o requisitante tem acesso a uma tela que mostra
 ### 12   DIFICULDADES ENCONTRADAS PELO GRUPO<br>
 
    * Divisão de tarefas;
-   * Encontrar tabela para left Join, pois quase todas fazem ligaçã;<br>
+   * Encontrar tabela para left Join, pois quase todas fazem ligação;<br>
    
 ### 13   TRABALHO DE MINERAÇÃO DE DADOS <br>
         a) captura das informaçõs
         b) integração com banco de dados em desenvolvimento
         c) atualização da documentação do trabalho incluindo a mineração de dados
-        
-### 13  FORMATACAO NO GIT: https://help.github.com/articles/basic-writing-and-formatting-syntax/
+
 
 ### 14 Backup completo do banco de dados postgres 
-    a) deve ser realizado no formato "backup" 
-        (Em Dump Options #1 Habilitar opções Don't Save Owner e Privilege)
-    b) antes de postar o arquivo no git o mesmo deve ser testado/restaurado por outro grupo de alunos/dupla
-    c) informar aqui o grupo de alunos/dupla que realizou o teste.
+
+   https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/backupIdo
     
 >## Marco de Entrega 04/Entrega Final em: (Data definida no cronograma)<br>
