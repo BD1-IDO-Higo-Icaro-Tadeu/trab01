@@ -9,9 +9,8 @@ cep_id INTEGER PRIMARY KEY
 );
 
 CREATE TABLE contato (
-celular INTEGER,
-telefone INTEGER,
-contato_id SERIAL PRIMARY KEY,
+contato varchar(100),
+tipo_contato varchar(100),    
 usuario_fid INTEGER
 );
 
@@ -99,14 +98,13 @@ FOREIGN KEY(servico_fid) REFERENCES servico (servico_id)
 
 ALTER TABLE cep ADD FOREIGN KEY(bairro_fid) REFERENCES bairro (bairro_id);
 ALTER TABLE contato ADD FOREIGN KEY(usuario_fid) REFERENCES pessoa (cpf_id);
-ALTER TABLE avalicao ADD FOREIGN KEY(prestador_fid) REFERENCES pessoa (cpf_id);
-ALTER TABLE avalicao ADD FOREIGN KEY(cliente_fid) REFERENCES pessoa (cpf_id);
-ALTER TABLE avalicao ADD FOREIGN KEY(servico_fid) REFERENCES servico (servico_id);
+ALTER TABLE avaliacao ADD FOREIGN KEY(prestador_fid) REFERENCES pessoa (cpf_id);
+ALTER TABLE avaliacao ADD FOREIGN KEY(cliente_fid) REFERENCES pessoa (cpf_id);
+ALTER TABLE avaliacao ADD FOREIGN KEY(servico_fid) REFERENCES servico (servico_id);
 ALTER TABLE cartao ADD FOREIGN KEY(cliente_fid) REFERENCES pessoa (cpf_id);
 ALTER TABLE bairro ADD FOREIGN KEY(cidade_fid) REFERENCES cidade (cidade_id);
 ALTER TABLE pessoa ADD FOREIGN KEY(servico_fid) REFERENCES servico (servico_id);
 ALTER TABLE pessoa ADD FOREIGN KEY(endereco_fid) REFERENCES endereco (endereco_id);
-
 
 
 
