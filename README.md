@@ -60,7 +60,7 @@ Antes de mandar a solicitação, o requisitante tem acesso a uma tela que mostra
         
     
 #### 5.1 Validação do Modelo Conceitual
-    NETIFES: Ana Carorlina Cebin, Matheus Kleber Barbosa, Jardielma
+    NETIFES: Ana Carolina Cebin, Matheus Kleber Barbosa, Jardielma
     
 
 #### 5.2 DECISÕES DE PROJETO
@@ -401,7 +401,7 @@ Antes de mandar a solicitação, o requisitante tem acesso a uma tela que mostra
   ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/subconsullta%20servicocontratadonota.png)<br>
   
 ### 10	ATUALIZAÇÃO DA DOCUMENTAÇÃO DOS SLIDES PARA APRESENTAÇAO FINAL (Mínimo 6 e Máximo 10)<br>
-  chegando<br>
+  https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/Apresenta%C3%A7%C3%A3o%20IDO.pdf<br>
 ### 11	TUTORIAL COMPLETO DE PASSOS PARA RESTAURACAO DO BANCO E EXECUCAO DE PROCEDIMENTOS ENVOLVIDOS NO TRABALHO PARA OBTENÇÃO DOS RESULTADOS<br>
         Para executar o back up do banco IDo, basta pegar o arquivo na secção 8.2 e  executar o script no PGAdmin.   
 
