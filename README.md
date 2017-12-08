@@ -358,6 +358,10 @@ Antes de mandar a solicitação, o requisitante tem acesso a uma tela que mostra
   Right outer Join  pessoa on (pessoa.cpf_id = contato.usuario_fid) where contato.tipo_contato = 'telefone';<br>
   ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/rigthjoin%20pessoa%20contato.png)<br>
   
+  select pessoa.nome, avaliacao.nota from avaliacao 
+  Left outer Join pessoa on (pessoa.cpf_id = avaliacao.cliente_fid) where avaliacao.nota >= 3.5;<br>
+  ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/leftouterjoin.PNG)<br>
+  
 #### 9.9	CONSULTAS COM SELF JOIN E VIEW <br>
   create view contato_usuario as select pessoa.nome,contato.tipo_contato,contato.contato from contato 
   inner Join  pessoa on (pessoa.cpf_id = contato.usuario_fid);
