@@ -16,7 +16,7 @@ usuario_fid INTEGER
 
 CREATE TABLE avaliacao (
 comentario VARCHAR(100),
-nota INTEGER,
+nota FLOAT,
 prestador_fid INTEGER,
 cliente_fid INTEGER,
 servico_fid INTEGER
