@@ -32,9 +32,9 @@ Antes de mandar a solicitação, o requisitante tem acesso a uma tela que mostra
     
 #### 4.2 QUAIS PERGUNTAS PODEM SER RESPONDIDAS COM O SISTEMA PROPOSTO?
 
-    O aplicativo pode oferecer um relatório tanto para o usário, como para o prestador de serviço.
-    O usuário pode ver um relatório de serviços contratados que pode servir de lembrete de um serviço que ele contratou.
-    Já pra o prestador de serviço, o relatório serve para ele ver seu redimento com o aplicativo.
+    O aplicativo pode oferecer um relatório tanto para o usário que busca o serviço, como para o usuário que presta o serviço.
+    O usuário pode ver um relatório de serviços contratados, pagamentos efetuados, avaliações feitas.
+    Já pra o prestador de serviço, histórico de pagamentos recebidos, clientes atendidos, rendimento, etc.
     
     Os principais relatórios que poderão ser obtidos por meio do sistema proposto são:
    
@@ -44,8 +44,9 @@ Antes de mandar a solicitação, o requisitante tem acesso a uma tela que mostra
     4- Relatório de Serviços contratados;
     5- Relatória de Serviços Realizados;
     6- Relatório de Serviços de um estado;
-    
-    
+    7- Relatório de Pagamentos Efetuados;
+    8- Relatório de Pagamentos Recebidos;
+    9- Relatório de Solicitações;
     
     
     
