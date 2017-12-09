@@ -174,7 +174,7 @@ Antes de mandar a solicitação, o requisitante tem acesso a uma tela que mostra
    
    
 #### 8.2 INCLUSÃO DO SCRIPT PARA CRIAÇÃO DE TABELA E INSERÇÃO DOS DADOS
-  BackuP<br>
+  Script para criação do Banco no pgAdmin<br>
    https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/arquivos/backup_ido.sql <br>
    
 #### 8.3 INCLUSÃO DO SCRIPT PARA EXCLUSÃO DE TABELAS EXISTENTES, CRIAÇÃO DE TABELA NOVAS E INSERÇÃO DOS DADOS <br>
@@ -337,7 +337,7 @@ Antes de mandar a solicitação, o requisitante tem acesso a uma tela que mostra
   select endereco.usuario_fid from pessoa
   inner join endereco on (pessoa.endereco_fid = endereco.endereco_id)
   group by endereco.usuario_fid
-  having  endereco.usuario_fid > 555555;<br>
+  having endereco.usuario_fid > 555555;<br>
   ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/innerjoin_grounpby%20pessoa_endereco.png_having.png.png)<br>
 
   select avaliacao.nota  from avaliacao 
