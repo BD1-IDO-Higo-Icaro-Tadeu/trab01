@@ -9,8 +9,8 @@ cep_id INTEGER PRIMARY KEY
 );
 
 CREATE TABLE contato (
-contato varchar(100),
-tipo_contato varchar(100),    
+contato VARCHAR(100),
+tipo_contato VARCHAR(100),    
 usuario_fid INTEGER
 );
 
