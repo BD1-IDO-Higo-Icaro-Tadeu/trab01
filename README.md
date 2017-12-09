@@ -61,7 +61,7 @@ Antes de mandar a solicitação, o requisitante tem acesso a uma tela que mostra
         
     
 #### 5.1 Validação do Modelo Conceitual
-    NETIFES: Ana Carolina Cebin, Matheus Kleber Barbosa, Jardielma
+    NETIFES: Ana Carolina Cebin, Matheus Kleber Barbosa, Jardielma Queiroz
     
 
 #### 5.2 DECISÕES DE PROJETO
@@ -155,7 +155,7 @@ Antes de mandar a solicitação, o requisitante tem acesso a uma tela que mostra
         - cliente_fid: campo de chave estrangeira, para identificação do usuário que contratou um serviço;
         - comentario: campo que armazena comentários feitos por um usuário (para avaliar um serviço);
         - nota: campo armazena nota avaliada pelo usuário;
-        -prestador_id: campo de chave estrangeira, para identificação do prestador de serviço.
+        - prestador_id: campo de chave estrangeira, para identificação do prestador de serviço.
         
 ### 6	MODELO LÓGICO<br>
 ![Alt text](https://github.com/BD1-IDO-Higo-Icaro-Tadeu/trab01/blob/master/images/modelo_logico_IDO.jpg "Modelo Lógico")
